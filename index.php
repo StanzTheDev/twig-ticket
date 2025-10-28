@@ -7,13 +7,11 @@ require_once __DIR__ . '/lib/autoload.php';
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
 
-// Add asset function
 $assetFunction = new \Twig\TwigFunction('asset', function ($path) {
     return '/' . ltrim($path, '/');
 });
 $twig->addFunction($assetFunction);
 
-// Simple routing
 $page = $_GET['page'] ?? 'landing';
 
 switch($page) {
