@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paseo - Ticket Management</title>
+    <link rel="stylesheet" href="public/css/navbar.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="my-nav">
+            <nav class="navbar">
+                <div class="nav-container">
+            
+                    <div class="nav-logo">
+                        <a href="/">Paseo</a>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                         <li class="nav-item">
+                            <a href="#ticket" class="nav-link">Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#dashboard" class="nav-link">Dashboard</a>
+                        </li>
+                       
+                        
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="?page=signup" class="cta-button">Get Started</a>
+                    </div>
+                    <div class="nav-toggle" id="navToggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="content">
+                <h1 class="h1">Simple. Powerful. Consistent ticket management workflow.</h1>
+                <p class="p-1">
+                    Our ticket management system helps you stay organized, resolve issues faster, and keep every request in one place. From open to closed, every step is simple, transparent, and built to keep your team focused on what matters most.
+                </p>
+                <a href="?page=signup" id="cta1" class="getStarted">Get Started</a>
+            </div>
+            <div class="wave-background">
+                <img src="public/images/wave.svg" alt="wave background" class="image">
+            </div>
+            <div class="decorative-circle circle-1"></div>
+            <div class="decorative-circle circle-2"></div>
+        </main>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="features-title">Why Choose TicketMaster Pro?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="public/images/rocket_launch_24dp_A29E91_FILL0_wght400_GRAD0_opsz24.svg" 
+                                 alt="rocket" 
+                                 width="40" 
+                                 height="40">
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Create and manage tickets in seconds with our intuitive interface</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="public/images/analytics_24dp_A29E91_FILL0_wght400_GRAD0_opsz24.svg" 
+                                 alt="analytics" 
+                                 width="40" 
+                                 height="40">
+                        </div>
+                        <h3>Smart Analytics</h3>
+                        <p>Track performance with real-time dashboard and detailed reports</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="public/images/lock_24dp_A29E91_FILL0_wght400_GRAD0_opsz24.svg" 
+                                 alt="security" 
+                                 width="40" 
+                                 height="40">
+                        </div>
+                        <h3>Secure & Reliable</h3>
+                        <p>Your data is protected with enterprise-grade security measures</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <span class="logo-text">Paseo</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-copyright">
+                        © 2024 TicketMaster Pro. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+  
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const bars = document.querySelectorAll('.bar');
+
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        bars.forEach(bar => bar.classList.toggle('active'));
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            bars.forEach(bar => bar.classList.remove('active'));
+        });
+    });
+
+    // Close menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('active');
+            bars.forEach(bar => bar.classList.remove('active'));
+        }
+    });
+});
+</script>
+</body>
+</html>
