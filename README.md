@@ -12,4 +12,4 @@
 ---
 
 ### 🧩 Old Deployment (Inactive)
-- Railway (inactive): [https://your-railway-url.up.railway.app](https://twig-ticket-production.up.railway.app/)
+- Railway (inactive): [old railway url](https://twig-ticket-production.up.railway.app/)
